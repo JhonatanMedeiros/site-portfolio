@@ -29,7 +29,7 @@ gulp.task('js', function() {
         .pipe(gulp.dest('dist/js'));
 });
 
-// create a task that ensures the `js` task is complete before
+// create a task that ensures the `js` task is complete before 
 // reloading browsers
 gulp.task('js-watch', ['js'], function(done) {
     browserSync.reload();
