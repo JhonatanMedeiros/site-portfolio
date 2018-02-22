@@ -69,13 +69,20 @@ body {
   padding: .75rem 1.25rem;
   font-weight: 700; }
 
+.cover-heading {
+  font-size: 3.7rem;
+  color: #fff;
+  font-weight: 700; }
+  .cover-heading-subtitle {
+    color: #fff; }
+
 /*
    * Footer
    */
 .mastfoot {
   color: rgba(255, 255, 255, 0.5); }
 
-#fullscreen-hero {
+#home {
   height: 100vh;
   position: relative;
   text-align: center;
@@ -110,6 +117,33 @@ body {
   z-index: 10;
   text-align: center;
   vertical-align: middle; }
+
+@media screen and (min-width: 750px) {
+  .learn-more {
+    font-size: 1.7rem; } }
+
+.learn-more {
+  bottom: 2.5%;
+  display: inline-block;
+  font-size: 1.3rem;
+  left: 50%;
+  padding: 20px;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 2;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.learn-more a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  border-bottom: none; }
+
+.learn-more a:hover {
+  color: rgba(255, 255, 255, 0.9); }
 
 /*
 * Portfolio
@@ -159,16 +193,6 @@ p.intro {
   text-align: center; }
 
 .slate {
-  color: #252a30; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
   color: #252a30; }
 
 @media screen and (min-width: 750px) {
