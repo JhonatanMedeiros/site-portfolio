@@ -12,15 +12,6 @@ a:hover {
   color: #fff; }
 
 /* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none;
-  /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff; }
-
 body {
   font-size: 1.4rem;
   font-family: brandon-grotesque, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -146,7 +137,7 @@ body {
       color: rgba(255, 255, 255, 0.7); }
 
 /*
-* Portfolio ad About
+* Portfolio, About and Contact
 */
 #projects {
   background-color: #eee; }
@@ -154,19 +145,22 @@ body {
 #about {
   background-color: #fff; }
 
-#projects, #about {
+#contact form {
+  text-align: left; }
+
+#projects, #about, #contact {
   text-align: center;
   margin: 0 auto; }
-  #projects i.fa, #about i.fa {
+  #projects i.fa, #about i.fa, #contact i.fa {
     font-size: 5.0rem; }
-  #projects .expertise-block, #about .expertise-block {
+  #projects .expertise-block, #about .expertise-block, #contact .expertise-block {
     margin: 4.0rem 0 1.0rem; }
-    #projects .expertise-block img, #about .expertise-block img {
+    #projects .expertise-block img, #about .expertise-block img, #contact .expertise-block img {
       height: 100px;
       width: 200px; }
-    #projects .expertise-block h4.title, #about .expertise-block h4.title {
+    #projects .expertise-block h4.title, #about .expertise-block h4.title, #contact .expertise-block h4.title {
       margin: 1.8rem 0; }
-    #projects .expertise-block p, #about .expertise-block p {
+    #projects .expertise-block p, #about .expertise-block p, #contact .expertise-block p {
       margin-bottom: 0;
       line-height: 1.8;
       font-size: 1.4rem; }
@@ -226,12 +220,13 @@ p.statement {
 
 @media screen and (min-width: 750px) {
   #projects,
-  #about .expertise-block {
+  #about,
+  #contact .expertise-block {
     margin: 4.0rem 0 0; } }
 
-.yellow {
-  color: #FED766; }
-
+/*
+* Footer
+*/
 #footer {
   padding: 80px 0 50px;
   background-color: #252a30;
