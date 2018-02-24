@@ -24,4 +24,4 @@ Isso gera um pasta chamada**dist**, contendo todo o projeto para distribuição.
 
 ## Copyright and License
 
-Copyright 2018 Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/gh-pages/LICENSE) license.
+Copyright 2018 Code released under the [MIT](https://github.com/JhonatanMedeiros/site-portfolio/blob/master/LICENSE) license.
