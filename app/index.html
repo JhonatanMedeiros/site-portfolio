@@ -1,17 +1,60 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
 
 <head>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Desenvolvedor WEB">
+    <meta name="author" content="Jhonatan Medeiros">
+    <meta name="keywords" content="Jhonatan Medeiros, Jhonatan, Medeiros, Desenvolvedor, Programador, Web Site, Angular, HTML">
+    <meta name="image" content="http://jhonatanmedeiros.com/assets/img/web-developer-tag.jpg">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Jhonatan Medeiros">
+    <meta itemprop="description" content="Desenvolvedor WEB">
+    <meta itemprop="image" content="http://jhonatanmedeiros.com/assets/img/web-developer-tag.jpg">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Jhonatan Medeiros" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://jhonatanmedeiros.com" />
+    <meta property="og:image" content="http://jhonatanmedeiros.com/assets/img/web-developer-tag.jpg" />
+    <meta property="og:description" content="Desenvolvedor WEB" />
+    <meta property="og:site_name" content="Jhonatan Medeiros" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="Jhonatan Medeiros">
+    <meta name="twitter:site" content="@JhonatannHM">
+    <meta name="twitter:title" content="Jhonatan Medeiros">
+    <meta name="twitter:description" content="Desenvolvedor WEB">
+    <meta name="twitter:creator" content="@JhonatannHM">
+    <meta name="twitter:image" content="http://jhonatanmedeiros.com/assets/img/web-developer-tag.jpg">
+
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- icon in the highest resolution we need it for -->
+    <link rel="icon" sizes="192x192" href="assets/img/profile-roud.png">
+
+    <!-- reuse same icon for Safari -->
+    <link rel="apple-touch-icon" href="assets/img/profile-roud.png">
+
+    <!-- multiple icons for IE -->
+    <meta name="msapplication-square310x310logo" content="assets/img/profile-roud.png">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#404040">
+
+
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="./css/cover.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -24,28 +67,26 @@
 
     <div id="wrapper">
 
-        <!-- Start Hero Section-->
+        <!-- Start Hero Section -->
         <section id="home" class="home-hero">
             <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
                 <header class="masthead mb-auto">
                     <div class="inner">
-                        <!-- <h3 class="masthead-brand">Jhonatan</h3> -->
                         <nav class="nav nav-masthead justify-content-center">
-                            <a class="nav-link active" href="#home">Home</a>
-                            <a class="nav-link" href="#">About</a>
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link active" href="#home">Início</a>
+                            <a class="nav-link" href="#about">Sobre</a>
+                            <a class="nav-link" href="#contact">Contato</a>
                         </nav>
                     </div>
                 </header>
 
                 <main role="main" class="inner cover">
+
                     <h1 class="cover-heading">Jhonatan Medeiros</h1>
                     <p class="lead cover-heading-subtitle">
                         Developer frontend & backend
                     </p>
-                    <!-- <p class="lead">
-                        <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
-                    </p> -->
+
                 </main>
 
                 <footer class="mastfoot mt-auto">
@@ -53,15 +94,34 @@
                     <div class="inner">
 
                         <div class="page-scroll learn-more">
-                            <a href="#projects">Learn more about what I do
+                            <a href="#about">
+                                Saiba mais sobre o que faço
                                 <br>
                                 <i class="fa fa-chevron-down"></i>
                             </a>
                         </div>
 
-                        <!--<p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>-->
                     </div>
                 </footer>
+            </div>
+        </section>
+
+
+        <!-- Start Personal Projecets Section -->
+        <section id="about">
+            <div class="container">
+                <div class="row row justify-content-md-center justify-content-sm-center justify-content-lg-center">
+                    <div>
+                        <p class="intro slate">Quem Sou Eu</p>
+                        <p class="statement gunmetal" style="font-size: 1.3rem;">
+                            <b>Olá,</b> meu nome é <b>Jhonatan Medeiros</b>, tenho 19 anos,
+                            <br>estudo Sistemas de Informação pela Faculdade Estácio de Florianópolis.
+                            <br><br>Atualmente trabalho com <b>Desenvolvimento Web</b>, tanto em frontend e backend.
+                            <br>Tenho habilidade desde HTML, CSS, JavaScript, até fremeworks como Angular 1 e 2, Node.js, Ionic,
+                            <br>Banco de Dados NoSQL, como o Mongo DB.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -69,7 +129,7 @@
         <!-- Start Personal Projecets Section-->
         <section id="projects">
             <div class="container">
-                <div class="row justify-content-md-center">
+                <div class="row row justify-content-md-center justify-content-sm-center justify-content-lg-center">
                     <div>
                         <p class="intro slate">Projetos Pessoais</p>
                         <p class="statement gunmetal">Alguns dos projetos pessoais que desenvolvi.</p>
@@ -110,45 +170,91 @@
             </div>
         </section>
 
-    </div>
 
+        <!-- Start Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="row row justify-content-md-center justify-content-sm-center justify-content-lg-center">
+                    <div>
+                        <p class="intro slate">Contatar</p>
+                    </div>
+                </div>
 
+                <form role="form" class="form-contact">
 
+                    <div class="form-group col-lg-12">
+                        <label class="form-control-label" for="name">Nome</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
 
+                    <div class="form-group col-lg-12">
+                        <label class="form-control-label" for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
 
+                    <div class="form-group col-lg-12">
+                        <label class="form-control-label" for="note">Notes</label>
+                        <textarea class="form-control" id="note" name="notes" rows="6" style="resize: none"
+                                  required></textarea>
+                    </div>
 
+                    <div class="col-sm-12 col-lg-12">
+                        <button type="submit" id="btnSubmit" class="btn btn-secondary btn-lg float-right">Enviar
+                        </button>
+                    </div>
+                </form>
 
-
-
-
-    <!--
-
-    <div id="wrapper">
-
-            <header></header>
-    <div id="fullscreen-hero" class="home-hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <a href="#" class="home-logo">
-                
-                </a>
-                <h1 class="cd-headline letters type"><span>Hi, I'm Matt. I design & build</span><br><span class="cd-words-wrapper"><b class="is-visible">user interfaces.</b><b>landing pages.</b><b>corporate websites.</b><b>web applications.</b></span></h1>
-                <div class="page-scroll"><a href="#sub-footer" class="button button-ghost">Yes, I'm Available For Hire</a></div>
-                <div class="page-scroll learn-more"><a href="#me">Learn more about what I do<br><i class="fa fa-chevron-down"></i></a></div>
             </div>
+        </section>
+
+
+        <!-- Start Footer -->
+        <footer id="footer">
+            <div class="footer">
+                <div class="container">
+                    <div class="row justify-content-md-center justify-content-sm-center justify-content-lg-center">
+                        <div class="col">
+                            <a href="#home" class="logo">Jhonatan Medeiros | Web Developer</a>
+                            <p class="made-by-me">Handmade by me © 2018.</p>
+                            <div class="social-links">
+
+                                <a href="mailto:contato@jhonatanmedeiros.com">
+                                    <i class="fa fa-envelope"></i>
+                                </a>
+
+                                <a href="https://linkedin.com/in/jhonatan-hardt-de-medeiros" target="_blank">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+
+                                <a href="https://github.com/JhonatanMedeiros" target="_blank">
+                                    <i class="fa fa-github"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- Scroll to Top Button-->
+        <div class="scroll-top page-scroll">
+            <a class="btn btn-primary" href="#home">
+                <i class="fa fa-chevron-up"></i>
+            </a>
         </div>
-    </div>
 
     </div>
-    -->
-
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

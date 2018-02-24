@@ -1,9 +1,11 @@
-/* Import Variables*/
-@import url(variables.scss);
-
 /*
  * Globals
  */
+
+/* Text bold */
+b {
+  font-weight: bold;
+}
 
 /* Links */
 
@@ -15,15 +17,15 @@ a:hover {
 
 /* Custom default button */
 
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none;
-  /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
+//.btn-secondary,
+//.btn-secondary:hover,
+//.btn-secondary:focus {
+//  color: #333;
+//  text-shadow: none;
+//  /* Prevent inheritance from `body` */
+//  background-color: #fff;
+//  border: .05rem solid #fff;
+//}
 
 body {
   font-size: 1.4rem;
@@ -200,11 +202,24 @@ body {
 }
 
 /*
-* Portfolio
+* Portfolio, About and Contact
 */
 
 #projects {
+  background-color: #eee;
+}
+
+#about {
   background-color: #fff;
+}
+
+#contact {
+  form {
+    text-align: left;
+  }
+}
+
+#projects, #about, #contact {
   text-align: center;
   margin: 0 auto;
 
@@ -311,11 +326,79 @@ p.statement {
 }
 
 @media screen and (min-width: 750px) {
-  #projects .expertise-block {
+  #projects,
+  #about,
+  #contact .expertise-block {
     margin: 4.0rem 0 0;
   }
 }
 
-.yellow {
-  color: #FED766;
+/*
+* Footer
+*/
+#footer {
+  padding: 80px 0 50px;
+  background-color: #252a30;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+
+  a {
+    text-decoration: none;
+  }
+
+  .social-links {
+    a {
+      display: inline-block;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      margin: 0 4px;
+      height: 36px;
+      width: 36px;
+      font-size: 1.6rem !important;
+      background-color: rgba(0,0,0,0.1);
+      border-radius: 50px;
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+    }
+  }
+
+}
+
+.scroll-top {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  width: 50px;
+  height: 50px;
+  z-index: 1049;
+
+  .btn {
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    line-height: 28px;
+  }
+
+  .btn-primary {
+    color: white;
+    background-color: #404040;
+    border-color: #404040;
+    font-weight: 700;
+  }
+
+  .btn-primary:hover, .btn-primary:focus, .btn-primary.active {
+    color: white !important;
+    background-color: #272727 !important;
+    border-color: #272727 !important;
+    box-shadow: none !important;
+  }
+
+  .btn-primary:active {
+    color: white !important;
+    background-color: #4d4d4d !important;
+    border-color: #4d4d4d !important;
+    box-shadow: none !important;
+  }
 }
