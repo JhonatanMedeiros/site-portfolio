@@ -20,19 +20,19 @@ gulp.task('serve', ['sass', 'js-watch'], function() {
         server: "./app"
     });
 
-    gulp.watch("app/scss/*.scss", ['sass']);
-    gulp.watch("app/css/*.css").on('change', browserSync.reload);
+    gulp.watch("app/assets/scss/*.scss", ['sass']);
+    gulp.watch("app/assets/css/*.css").on('change', browserSync.reload);
     gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src("app/scss/*.scss")
+    return gulp.src("app/assets/scss/*.scss")
         .pipe(sass())
         .pipe(autoprefixer('last 2 versions'))
         .pipe(concat('main.css'))
         .pipe(minifyCSS())
-        .pipe(gulp.dest("app/css"))
+        .pipe(gulp.dest("app/assets/css"))
         .pipe(notify({ message: 'Styles task complete' }))
         .pipe(browserSync.stream());
 });
@@ -69,7 +69,7 @@ gulp.task('dist', ['clean'], function (done) {
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('dist-sass', function() {
-    return gulp.src("app/scss/*.scss")
+    return gulp.src("app/assets/scss/*.scss")
         .pipe(sass())
         .pipe(gulp.dest("dist/css"));
 
@@ -77,7 +77,7 @@ gulp.task('dist-sass', function() {
 });
 
 gulp.task('dist-js', function() {
-    return gulp.src('app/js/*js')
+    return gulp.src('app/assets/js/*js')
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
