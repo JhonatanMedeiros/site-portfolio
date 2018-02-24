@@ -15,18 +15,6 @@ a:hover {
   color: #fff;
 }
 
-/* Custom default button */
-
-//.btn-secondary,
-//.btn-secondary:hover,
-//.btn-secondary:focus {
-//  color: #333;
-//  text-shadow: none;
-//  /* Prevent inheritance from `body` */
-//  background-color: #fff;
-//  border: .05rem solid #fff;
-//}
-
 body {
   font-size: 1.4rem;
   font-family: brandon-grotesque, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -142,7 +130,7 @@ body {
 
 @media screen and (min-width: 550px) {
   .home-hero {
-    background-image: url(/assets/img/computer-programing.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.82), rgba(17, 19, 31, 0.93)), url(/assets/img/computer-programing.jpeg);
   }
 }
 
