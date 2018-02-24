@@ -1,9 +1,11 @@
-/* Import Variables*/
-@import url(variables.scss);
-
 /*
  * Globals
  */
+
+/* Text bold */
+b {
+  font-weight: bold;
+}
 
 /* Links */
 
@@ -200,11 +202,17 @@ body {
 }
 
 /*
-* Portfolio
+* Portfolio ad About
 */
 
 #projects {
+  background-color: #eee;
+}
+#about {
   background-color: #fff;
+}
+
+#projects, #about {
   text-align: center;
   margin: 0 auto;
 
@@ -311,11 +319,42 @@ p.statement {
 }
 
 @media screen and (min-width: 750px) {
-  #projects .expertise-block {
+  #projects,
+  #about .expertise-block {
     margin: 4.0rem 0 0;
   }
 }
 
 .yellow {
   color: #FED766;
+}
+
+
+#footer {
+  padding: 80px 0 50px;
+  background-color: #252a30;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+
+  a {
+    text-decoration: none;
+  }
+
+  .social-links {
+    a {
+      display: inline-block;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      margin: 0 4px;
+      height: 36px;
+      width: 36px;
+      font-size: 1.6rem !important;
+      background-color: rgba(0,0,0,0.1);
+      border-radius: 50px;
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+    }
+  }
+
 }

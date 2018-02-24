@@ -1,8 +1,10 @@
-/* Import Variables*/
-@import url(variables.scss);
 /*
  * Globals
  */
+/* Text bold */
+b {
+  font-weight: bold; }
+
 /* Links */
 a,
 a:focus,
@@ -144,22 +146,27 @@ body {
       color: rgba(255, 255, 255, 0.7); }
 
 /*
-* Portfolio
+* Portfolio ad About
 */
 #projects {
-  background-color: #fff;
+  background-color: #eee; }
+
+#about {
+  background-color: #fff; }
+
+#projects, #about {
   text-align: center;
   margin: 0 auto; }
-  #projects i.fa {
+  #projects i.fa, #about i.fa {
     font-size: 5.0rem; }
-  #projects .expertise-block {
+  #projects .expertise-block, #about .expertise-block {
     margin: 4.0rem 0 1.0rem; }
-    #projects .expertise-block img {
+    #projects .expertise-block img, #about .expertise-block img {
       height: 100px;
       width: 200px; }
-    #projects .expertise-block h4.title {
+    #projects .expertise-block h4.title, #about .expertise-block h4.title {
       margin: 1.8rem 0; }
-    #projects .expertise-block p {
+    #projects .expertise-block p, #about .expertise-block p {
       margin-bottom: 0;
       line-height: 1.8;
       font-size: 1.4rem; }
@@ -218,8 +225,30 @@ p.statement {
   color: #524e4d; }
 
 @media screen and (min-width: 750px) {
-  #projects .expertise-block {
+  #projects,
+  #about .expertise-block {
     margin: 4.0rem 0 0; } }
 
 .yellow {
   color: #FED766; }
+
+#footer {
+  padding: 80px 0 50px;
+  background-color: #252a30;
+  color: #fff;
+  text-align: center;
+  font-size: 14px; }
+  #footer a {
+    text-decoration: none; }
+  #footer .social-links a {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    margin: 0 4px;
+    height: 36px;
+    width: 36px;
+    font-size: 1.6rem !important;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
