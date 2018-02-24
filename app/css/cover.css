@@ -247,3 +247,32 @@ p.statement {
     border-radius: 50px;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out; }
+
+.scroll-top {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  width: 50px;
+  height: 50px;
+  z-index: 1049; }
+  .scroll-top .btn {
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    line-height: 28px; }
+  .scroll-top .btn-primary {
+    color: white;
+    background-color: #404040;
+    border-color: #404040;
+    font-weight: 700; }
+  .scroll-top .btn-primary:hover, .scroll-top .btn-primary:focus, .scroll-top .btn-primary.active {
+    color: white !important;
+    background-color: #272727 !important;
+    border-color: #272727 !important;
+    box-shadow: none !important; }
+  .scroll-top .btn-primary:active {
+    color: white !important;
+    background-color: #4d4d4d !important;
+    border-color: #4d4d4d !important;
+    box-shadow: none !important; }
