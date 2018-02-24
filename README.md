@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/JhonatanMedeiros/site-portfolio.svg?branch=master)](https://travis-ci.org/JhonatanMedeiros/site-portfolio)
+
 # [Jhonatan Medeiros - Site](http://jhonatanmedeiros.com)
 
 Site Pesssoal de [Jhonatan Medeiros](http://jhonatanmedeiros.com)
