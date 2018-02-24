@@ -51,13 +51,13 @@
 
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/main.min.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
 
     <title>Jhonatan Medeiros</title>
 
@@ -65,196 +65,196 @@
 
 <body>
 
-    <div id="wrapper">
+<div id="wrapper">
 
-        <!-- Start Hero Section -->
-        <section id="home" class="home-hero">
-            <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-                <header class="masthead mb-auto">
-                    <div class="inner">
-                        <nav class="nav nav-masthead justify-content-center">
-                            <a class="nav-link active" href="#home">Início</a>
-                            <a class="nav-link" href="#about">Sobre</a>
-                            <a class="nav-link" href="#contact">Contato</a>
-                        </nav>
+    <!-- Start Hero Section -->
+    <section id="home" class="home-hero">
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+                <div class="inner">
+                    <nav class="nav nav-masthead justify-content-center">
+                        <a class="nav-link active" href="#home">Início</a>
+                        <a class="nav-link" href="#about">Sobre</a>
+                        <a class="nav-link" href="#contact">Contato</a>
+                    </nav>
+                </div>
+            </header>
+
+            <main role="main" class="inner cover">
+
+                <h1 class="cover-heading">Jhonatan Medeiros</h1>
+                <p class="lead cover-heading-subtitle">
+                    Developer frontend & backend
+                </p>
+
+            </main>
+
+            <footer class="mastfoot mt-auto">
+
+                <div class="inner">
+
+                    <div class="page-scroll learn-more">
+                        <a href="#about">
+                            Saiba mais sobre o que faço
+                            <br>
+                            <i class="fa fa-chevron-down"></i>
+                        </a>
                     </div>
-                </header>
 
-                <main role="main" class="inner cover">
+                </div>
+            </footer>
+        </div>
+    </section>
 
-                    <h1 class="cover-heading">Jhonatan Medeiros</h1>
-                    <p class="lead cover-heading-subtitle">
-                        Developer frontend & backend
+
+    <!-- Start Personal Projecets Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row row justify-content-md-center justify-content-sm-center justify-content-lg-center">
+                <div>
+                    <p class="intro slate">Quem Sou Eu</p>
+                    <p class="statement gunmetal" style="font-size: 1.3rem;">
+                        <b>Olá,</b> meu nome é <b>Jhonatan Medeiros</b>, tenho 19 anos,
+                        <br>estudo Sistemas de Informação pela Faculdade Estácio de Florianópolis.
+                        <br><br>Atualmente trabalho com <b>Desenvolvimento Web</b>, tanto em frontend e backend.
+                        <br>Tenho habilidade desde HTML, CSS, JavaScript, até fremeworks como Angular 1 e 2, Node.js, Ionic,
+                        <br>Banco de Dados NoSQL, como o Mongo DB.
                     </p>
-
-                </main>
-
-                <footer class="mastfoot mt-auto">
-
-                    <div class="inner">
-
-                        <div class="page-scroll learn-more">
-                            <a href="#about">
-                                Saiba mais sobre o que faço
-                                <br>
-                                <i class="fa fa-chevron-down"></i>
-                            </a>
-                        </div>
-
-                    </div>
-                </footer>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
-        <!-- Start Personal Projecets Section -->
-        <section id="about">
-            <div class="container">
-                <div class="row row justify-content-md-center justify-content-sm-center justify-content-lg-center">
-                    <div>
-                        <p class="intro slate">Quem Sou Eu</p>
-                        <p class="statement gunmetal" style="font-size: 1.3rem;">
-                            <b>Olá,</b> meu nome é <b>Jhonatan Medeiros</b>, tenho 19 anos,
-                            <br>estudo Sistemas de Informação pela Faculdade Estácio de Florianópolis.
-                            <br><br>Atualmente trabalho com <b>Desenvolvimento Web</b>, tanto em frontend e backend.
-                            <br>Tenho habilidade desde HTML, CSS, JavaScript, até fremeworks como Angular 1 e 2, Node.js, Ionic,
-                            <br>Banco de Dados NoSQL, como o Mongo DB.
+    <!-- Start Personal Projecets Section-->
+    <section id="projects">
+        <div class="container">
+            <div class="row row justify-content-md-center justify-content-sm-center justify-content-lg-center">
+                <div>
+                    <p class="intro slate">Projetos Pessoais</p>
+                    <p class="statement gunmetal">Alguns dos projetos pessoais que desenvolvi.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="expertise-block">
+                        <img src="assets/img/angular_logo.svg">
+                        <h4 class="title slate">Sistema ADM Blog</h4>
+                        <p class="summary">
+                            Um sistema web de blog, com painel de administração do blog.
+                            Sistema desenvolvido em Angular 4.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="expertise-block">
+                        <img src="assets/img/node.js_logo.svg">
+                        <h4 class="title slate">ADM Blog - API</h4>
+                        <p class="summary">
+                            API rest para sistema web de blog.
+                            Sistema desenvolvido em NODE.js, express, mongoose, passport.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="expertise-block">
+                        <img src="assets/img/ionic_logo.svg">
+                        <h4 class="title slate">Aplicativo Controle Financeiro</h4>
+                        <p class="summary">
+                            Um projeto de aplicativo para o uso pessoal, para gerenciar o controle financeiro.
+                            Aplicativo desenvolvido em Ionic 1.
                         </p>
                     </div>
                 </div>
             </div>
-        </section>
-
-
-        <!-- Start Personal Projecets Section-->
-        <section id="projects">
-            <div class="container">
-                <div class="row row justify-content-md-center justify-content-sm-center justify-content-lg-center">
-                    <div>
-                        <p class="intro slate">Projetos Pessoais</p>
-                        <p class="statement gunmetal">Alguns dos projetos pessoais que desenvolvi.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-lg-4">
-                        <div class="expertise-block">
-                            <img src="assets/img/angular_logo.svg">
-                            <h4 class="title slate">Sistema ADM Blog</h4>
-                            <p class="summary">
-                                Um sistema web de blog, com painel de administração do blog.
-                                Sistema desenvolvido em Angular 4.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="expertise-block">
-                            <img src="assets/img/node.js_logo.svg">
-                            <h4 class="title slate">ADM Blog - API</h4>
-                            <p class="summary">
-                                API rest para sistema web de blog.
-                                Sistema desenvolvido em NODE.js, express, mongoose, passport.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="expertise-block">
-                            <img src="assets/img/ionic_logo.svg">
-                            <h4 class="title slate">Aplicativo Controle Financeiro</h4>
-                            <p class="summary">
-                                Um projeto de aplicativo para o uso pessoal, para gerenciar o controle financeiro.
-                                Aplicativo desenvolvido em Ionic 1.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Start Contact Section -->
-        <section id="contact">
-            <div class="container">
-                <div class="row row justify-content-md-center justify-content-sm-center justify-content-lg-center">
-                    <div>
-                        <p class="intro slate">Contatar</p>
-                    </div>
-                </div>
-
-                <form role="form" class="form-contact">
-
-                    <div class="form-group col-lg-12">
-                        <label class="form-control-label" for="name">Nome</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group col-lg-12">
-                        <label class="form-control-label" for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group col-lg-12">
-                        <label class="form-control-label" for="note">Notes</label>
-                        <textarea class="form-control" id="note" name="notes" rows="6" style="resize: none"
-                                  required></textarea>
-                    </div>
-
-                    <div class="col-sm-12 col-lg-12">
-                        <button type="submit" id="btnSubmit" class="btn btn-secondary btn-lg float-right">Enviar
-                        </button>
-                    </div>
-                </form>
-
-            </div>
-        </section>
-
-
-        <!-- Start Footer -->
-        <footer id="footer">
-            <div class="footer">
-                <div class="container">
-                    <div class="row justify-content-md-center justify-content-sm-center justify-content-lg-center">
-                        <div class="col">
-                            <a href="#home" class="logo">Jhonatan Medeiros | Web Developer</a>
-                            <p class="made-by-me">Handmade by me © 2018.</p>
-                            <div class="social-links">
-
-                                <a href="mailto:contato@jhonatanmedeiros.com">
-                                    <i class="fa fa-envelope"></i>
-                                </a>
-
-                                <a href="https://linkedin.com/in/jhonatan-hardt-de-medeiros" target="_blank">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-
-                                <a href="https://github.com/JhonatanMedeiros" target="_blank">
-                                    <i class="fa fa-github"></i>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-
-        <!-- Scroll to Top Button-->
-        <div class="scroll-top page-scroll" id="btn-scroll">
-            <button class="btn btn-primary">
-                <i class="fa fa-chevron-up"></i>
-            </button>
         </div>
+    </section>
 
+
+    <!-- Start Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row row justify-content-md-center justify-content-sm-center justify-content-lg-center">
+                <div>
+                    <p class="intro slate">Contatar</p>
+                </div>
+            </div>
+
+            <form role="form" class="form-contact">
+
+                <div class="form-group col-lg-12">
+                    <label class="form-control-label" for="name">Nome</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+
+                <div class="form-group col-lg-12">
+                    <label class="form-control-label" for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+
+                <div class="form-group col-lg-12">
+                    <label class="form-control-label" for="note">Notes</label>
+                    <textarea class="form-control" id="note" name="notes" rows="6" style="resize: none"
+                              required></textarea>
+                </div>
+
+                <div class="col-sm-12 col-lg-12">
+                    <button type="submit" id="btnSubmit" class="btn btn-secondary btn-lg float-right">Enviar
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+
+    <!-- Start Footer -->
+    <footer id="footer">
+        <div class="footer">
+            <div class="container">
+                <div class="row justify-content-md-center justify-content-sm-center justify-content-lg-center">
+                    <div class="col">
+                        <a href="#home" class="logo">Jhonatan Medeiros | Web Developer</a>
+                        <p class="made-by-me">Handmade by me © 2018.</p>
+                        <div class="social-links">
+
+                            <a href="mailto:contato@jhonatanmedeiros.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+
+                            <a href="https://linkedin.com/in/jhonatan-hardt-de-medeiros" target="_blank">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+
+                            <a href="https://github.com/JhonatanMedeiros" target="_blank">
+                                <i class="fa fa-github"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scroll to Top Button-->
+    <div class="scroll-top page-scroll" id="btn-scroll">
+        <button class="btn btn-primary">
+            <i class="fa fa-chevron-up"></i>
+        </button>
     </div>
 
+</div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <script src="assets/js/main.js"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="assets/js/main.min.js"></script>
 </body>
 
 </html>

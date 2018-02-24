@@ -1,103 +1,130 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
-var minifyCSS = require('gulp-minify-css');
+var header = require('gulp-header');
+var cleanCSS = require('gulp-clean-css');
+var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
-var autoprefixer = require('gulp-autoprefixer');
-var cssnano = require('gulp-cssnano');
-var rename = require('gulp-rename');
-var concat = require('gulp-concat');
-var notify = require('gulp-notify');
+var sass = require('gulp-sass');
 var del = require('del');
 
+var pkg = require('./package.json');
 
 
-// Static Server + watching scss/html files
-gulp.task('serve', ['sass', 'js-watch'], function() {
+// Set the banner content
+var banner = ['/*!\n',
+    ' * Jhonatan Medeiros - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
+    ' * Copyright 2018-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
+    ' * License <%= pkg.license %>)\n',
+    ' */\n',
+    ''
+].join('');
 
+// Minify compiled CSS
+gulp.task('minify-css', function() {
+    return gulp.src('app/assets/scss/*.scss')
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('dist/assets/css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
+
+gulp.task('sass', function () {
+    return gulp.src('app/assets/scss/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('dist/assets/css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
+
+// Minify JS
+gulp.task('minify-js', function() {
+    return gulp.src([
+        'app/assets/js/*.js'
+    ])
+        .pipe(uglify())
+        .pipe(header(banner, { pkg: pkg }))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('dist/assets/js'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
+
+// Copy vendor libraries from /node_modules into /vendor
+gulp.task('copy:vendor', function() {
+    gulp.src([
+        'node_modules/bootstrap/dist/css/bootstrap.min.css',
+        'node_modules/bootstrap/dist/js/bootstrap.min.js'
+    ])
+        .pipe(gulp.dest('dist/assets/vendor/bootstrap'));
+
+    gulp.src([
+        'node_modules/jquery/dist/jquery.min.js'
+    ])
+        .pipe(gulp.dest('dist/assets/vendor/jquery'));
+
+    gulp.src([
+        'node_modules/font-awesome/**',
+        '!node_modules/font-awesome/css/font-awesome.css',
+        '!node_modules/font-awesome/less/**/**',
+        '!node_modules/font-awesome/scss/**/*',
+        '!node_modules/font-awesome/**/*.map',
+        '!node_modules/font-awesome/.npmignore',
+        '!node_modules/font-awesome/*.txt',
+        '!node_modules/font-awesome/*.md',
+        '!node_modules/font-awesome/*.json'
+    ])
+        .pipe(gulp.dest('dist/assets/vendor/font-awesome'));
+
+    gulp.src('app/mail/*')
+        .pipe(gulp.dest('dist/mail'));
+
+    gulp.src('app/assets/img/*')
+        .pipe(gulp.dest('dist/assets/img'));
+
+    gulp.src([,
+        'app/index.html',
+        'app/manifest.json'
+    ])
+        .pipe(gulp.dest('dist/'));
+});
+
+// Run everything
+gulp.task('default', ['dev']);
+
+// Configure the browserSync task
+gulp.task('serve', function() {
     browserSync.init({
-        server: "./app"
-    });
-
-    gulp.watch("app/assets/scss/*.scss", ['sass']);
-    gulp.watch("app/assets/css/*.css").on('change', browserSync.reload);
-    gulp.watch("app/*.html").on('change', browserSync.reload);
+        server: {
+            baseDir: 'dist/'
+        }
+    })
 });
 
-// Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function() {
-    return gulp.src("app/assets/scss/*.scss")
-        .pipe(sass())
-        .pipe(autoprefixer('last 2 versions'))
-        .pipe(concat('main.css'))
-        .pipe(minifyCSS())
-        .pipe(gulp.dest("app/assets/css"))
-        .pipe(notify({ message: 'Styles task complete' }))
-        .pipe(browserSync.stream());
+// Dev task with browserSync
+gulp.task('dev', function() {
+
+    gulp.start('serve', 'sass', 'minify-js', 'copy:vendor');
+
+    // gulp.watch('www/assets/css/*.scss', ['minify-css']);
+    gulp.watch('app/assets/css/*.scss', ['sass']);
+    gulp.watch('app/assets/js/*.js', ['minify-js']);
+    // Reloads the browser whenever HTML or JS files change
+    gulp.watch('app/*.html', browserSync.reload);
+    gulp.watch('app/assets/js/**/*.js', browserSync.reload);
 });
 
-// process JS files and return the stream.
-gulp.task('js', function() {
-    return gulp.src('app/js/*js')
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
-});
+gulp.task('dist', ['clean'], function () {
 
-// create a task that ensures the `js` task is complete before 
-// reloading browsers
-gulp.task('js-watch', ['js'], function(done) {
-    browserSync.reload();
-    done();
-});
-
-
-gulp.task('images', function() {
-    return gulp.src('app/assets/img/*')
-        .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-        .pipe(gulp.dest('dist/assets/img'))
-        .pipe(notify({ message: 'Images task complete' }));
-});
-
-
-
-
-gulp.task('dist', ['clean'], function (done) {
-    gulp.start('dist-sass', 'dist-js', 'images', 'dist-html');
+    gulp.start('sass', 'minify-js', 'copy:vendor');
 
 });
 
-// Compile sass into CSS & auto-inject into browsers
-gulp.task('dist-sass', function() {
-    return gulp.src("app/assets/scss/*.scss")
-        .pipe(sass())
-        .pipe(gulp.dest("dist/css"));
-
-
-});
-
-gulp.task('dist-js', function() {
-    return gulp.src('app/assets/js/*js')
-        .pipe(rename({suffix: '.min'}))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'))
-        .pipe(notify({ message: 'Scripts task complete' }));
-});
-
-gulp.task('dist-html', function () {
-    return gulp.src('app/index.html')
-        .pipe(gulp.dest('dist/'))
-        .pipe(notify({ message: 'Dist Html task complete' }));
-});
-
+//Delete folder dist
 gulp.task('clean', function() {
-    return del(['dist/','dist/css', 'dist/js', 'dist/assets/img']);
+    return del('dist');
 });
-
-
-
-
-
-
-
-gulp.task('default', ['serve']);
