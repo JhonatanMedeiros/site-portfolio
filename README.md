@@ -20,7 +20,7 @@ Para gerar o build de distribuição, execute o seguinte comado:
 
 ```$ gulp dist```
 
-Isso gera um pasta chamada**dist**, contendo todo o projeto para distribuição.
+Isso gera um pasta chamada **dist**, contendo todo o projeto para distribuição.
 
 ## Copyright and License
 
