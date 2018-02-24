@@ -373,6 +373,13 @@ p.statement {
   height: 50px;
   z-index: 1049;
 
+  &:hover {
+    i {
+      -webkit-transform: translate(0, -40%);
+      transform: translate(0, -40%);
+    }
+  }
+
   .btn {
     font-size: 20px;
     width: 50px;
@@ -400,5 +407,13 @@ p.statement {
     background-color: #4d4d4d !important;
     border-color: #4d4d4d !important;
     box-shadow: none !important;
+  }
+
+  i {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
 }
