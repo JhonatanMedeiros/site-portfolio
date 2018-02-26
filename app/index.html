@@ -18,6 +18,20 @@
         gtag('config', 'UA-114755127-1');
     </script>
 
+    <script>
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js').then(function (registration) {
+                    // Registration was successful
+                }).catch(function (err) {
+                    // registration failed :(
+                });
+            });
+        }
+
+    </script>
+
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
