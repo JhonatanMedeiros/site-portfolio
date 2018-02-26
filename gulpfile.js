@@ -88,7 +88,8 @@ gulp.task('copy:vendor', function() {
 
     gulp.src([,
         'app/index.html',
-        'app/manifest.json'
+        'app/manifest.json',
+        'app/sw.js'
     ])
         .pipe(gulp.dest('dist/'));
 
