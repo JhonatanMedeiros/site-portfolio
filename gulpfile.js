@@ -91,6 +91,18 @@ gulp.task('copy:vendor', function() {
         'app/manifest.json'
     ])
         .pipe(gulp.dest('dist/'));
+
+});
+
+// Run reload index
+gulp.task('html', function () {
+
+    gulp.src('app/index.html')
+        .pipe(gulp.dest('dist/'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+
 });
 
 // Run everything
@@ -110,12 +122,9 @@ gulp.task('dev', function() {
 
     gulp.start('serve', 'sass', 'minify-js', 'copy:vendor');
 
-    // gulp.watch('www/assets/css/*.scss', ['minify-css']);
-    gulp.watch('app/assets/css/*.scss', ['sass']);
+    gulp.watch('app/assets/scss/*.scss', ['sass']);
     gulp.watch('app/assets/js/*.js', ['minify-js']);
-    // Reloads the browser whenever HTML or JS files change
-    gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/assets/js/**/*.js', browserSync.reload);
+    gulp.watch('app/*.html', ['html'], browserSync.reload);
 });
 
 gulp.task('dist', ['clean'], function () {
