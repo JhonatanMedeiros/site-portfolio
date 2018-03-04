@@ -119,6 +119,18 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+
+  nav a {
+    cursor: pointer;
+    text-decoration: none;
+    text-decoration: -moz-none;
+  }
+
+  #aboutMoreScroll {
+    cursor: pointer;
+    text-decoration: none;
+    text-decoration: -moz-none;
+  }
 }
 
 .home-hero {
