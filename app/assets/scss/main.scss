@@ -136,12 +136,7 @@ body {
 .home-hero {
   position: relative;
   background-image: none;
-}
-
-@media screen and (min-width: 550px) {
-  .home-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.82), rgba(17, 19, 31, 0.93)), url(/assets/img/computer-programing.jpg);
-  }
+  background: linear-gradient(rgba(0, 0, 0, 0.82), rgba(17, 19, 31, 0.93)), url(/assets/img/computer-programing.jpg);
 }
 
 @media screen and (min-width: 550px) {
@@ -209,6 +204,29 @@ body {
 
 #about {
   background-color: #fff;
+
+  .profile-img {
+    border-radius: 50%;
+  }
+
+  .profile-desc {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 992px) {
+    .profile-desc {
+      margin-top: 15px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .profile-desc {
+      float: right;
+      text-align: left;
+      margin-left: 15px;
+    }
+  }
+
 }
 
 #contact {
@@ -321,14 +339,6 @@ p.statement {
 
 .gunmetal {
   color: #524e4d;
-}
-
-@media screen and (min-width: 750px) {
-  #projects,
-  #about,
-  #contact .expertise-block {
-    margin: 4.0rem 0 0;
-  }
 }
 
 /*
