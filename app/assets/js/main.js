@@ -78,9 +78,33 @@ function scrollFunction() {
     }
 }
 
-
-$('#btn-scroll').click(function () {      // When arrow is clicked
+// When arrow is clicked
+$('#btn-scroll').click(function () {
     $('body,html').animate({
-        scrollTop: 0                       // Scroll to top of body
+        scrollTop: 0    // Scroll to top of body
+    }, 500);
+});
+
+
+// When menu about is clicked
+$('#aboutScroll').click(function () {
+    $('html, body').animate({
+        scrollTop: $('#about').offset().top // Scroll to element
+    }, 500);
+});
+
+
+// When about me is clicked
+$('#aboutMoreScroll').click(function () {
+    $('html, body').animate({
+        scrollTop: $('#about').offset().top // Scroll to element
+    }, 500);
+});
+
+
+// When contact is clicked
+$('#contactScroll').click(function () {
+    $('html, body').animate({
+        scrollTop: $('#contact').offset().top // Scroll to element
     }, 500);
 });
