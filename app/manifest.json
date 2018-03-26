@@ -1,6 +1,6 @@
 {
   "name": "Jhonatan Medeiros",
-  "short_name": "Jhonatan Medeiros",
+  "short_name": "Jhonatan M",
   "dir": "rtl",
   "lang": "pt",
   "start_url": ".",
@@ -29,6 +29,11 @@
       "src": "assets/img/profile-roud.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "assets/img/profile-roud.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ]
 }
