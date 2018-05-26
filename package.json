@@ -1,13 +1,14 @@
 {
     "name": "myportfolio",
     "title": "Jhonatan Medeiros - Site Portfolio",
-  "version": "1.0.6",
+    "version": "1.0.6",
     "description": "",
     "homepage": "http://www.jhonatanmedeiros.com",
     "main": "index.js",
     "scripts": {
-        "serve": "gulp dev",
-        "dist": "gulp dist",
+        "serve": "npm run gulp dev",
+        "dist": "npm run gulp dist",
+        "gulp": "./node_modules/gulp/bin/gulp.js",
         "test": "echo \"Error: no test specified\" && exit 0"
     },
     "author": "Jhonatan Hardt de Medeiros",
