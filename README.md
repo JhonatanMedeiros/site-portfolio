@@ -12,13 +12,13 @@ Depois de fazer o clone do repositorio, execute o comando no diretorio raiz:
 
 Para trabalhar no projeto, execute o seguinte comando:
 
-```$ gulp dev```
+```$ npm run serve```
 
 ## Distribuição
 
 Para gerar o build de distribuição, execute o seguinte comado:
 
-```$ gulp dist```
+```$ npm run dist```
 
 Isso gera um pasta chamada **dist**, contendo todo o projeto para distribuição.
 
