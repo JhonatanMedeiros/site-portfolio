@@ -207,6 +207,19 @@ body {
 
   .profile-img {
     border-radius: 50%;
+    height: 125px;
+  }
+
+  .social-links {
+    width: 100%;
+    display: table;
+    a, a:hover, a:active, a:focus {
+      color: #636363;
+      text-decoration: none;
+    }
+    .fa-2x {
+      font-size: 2em !important;
+    }
   }
 
   .profile-desc {
@@ -247,6 +260,17 @@ body {
   .expertise-block {
 
     margin: 4.0rem 0 1.0rem;
+
+    .fa-2x {
+      font-size: 2em !important;
+    }
+
+    .links {
+      a, a:hover, a:active, a:focus {
+        color: #636363;
+        text-decoration: none;
+      }
+    }
 
     img {
       height: 100px;

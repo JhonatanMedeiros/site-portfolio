@@ -6,6 +6,7 @@
     "homepage": "http://www.jhonatanmedeiros.com",
     "main": "index.js",
     "scripts": {
+        "start": "npm run serve",
         "serve": "npm run gulp dev",
         "dist": "npm run gulp dist",
         "gulp": "./node_modules/gulp/bin/gulp.js",

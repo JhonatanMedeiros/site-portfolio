@@ -11,27 +11,27 @@
   "description": "Jhonatan Medeiros",
   "icons": [
     {
-      "src": "assets/img/profile-roud.png",
+      "src": "assets/img/my-profile.jpg",
       "type": "image/png",
       "sizes": "128x128"
     },
     {
-      "src": "assets/img/profile-roud.png",
+      "src": "assets/img/my-profile.jpg",
       "type": "image/png",
       "sizes": "152x152"
     },
     {
-      "src": "assets/img/profile-roud.png",
+      "src": "assets/img/my-profile.jpg",
       "type": "image/png",
       "sizes": "144x144"
     },
     {
-      "src": "assets/img/profile-roud.png",
+      "src": "assets/img/my-profile.jpg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "assets/img/profile-roud.png",
+      "src": "assets/img/my-profile.jpg",
       "type": "image/png",
       "sizes": "512x512"
     }

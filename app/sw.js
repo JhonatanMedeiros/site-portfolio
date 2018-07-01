@@ -7,7 +7,8 @@ var urlsToCache = [
     '/assets/img/computer-programing.jpg',
     '/assets/img/ionic_logo.svg',
     '/assets/img/node.js_logo.svg',
-    '/assets/img/profile-roud.png',
+    '/assets/img/my-profile.jpg',
+    '/assets/img/ng-movie-countdown.png',
     '/assets/img/web-developer-tag.jpg'
 ];
 
