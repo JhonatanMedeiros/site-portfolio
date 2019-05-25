@@ -1,9 +1,0 @@
-language: node_js
-rvm:
- - 2.2
- - jruby
- - rbx-3
-notifications:
-  email:
-    - contato@jhonatanmedeiros.com
-    - jhonatan.medeiros02@gmail.com
