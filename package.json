@@ -1,39 +1,46 @@
 {
-    "name": "myportfolio",
-    "title": "Jhonatan Medeiros - Site Portfolio",
-    "version": "1.0.6",
-    "description": "",
-    "homepage": "http://www.jhonatanmedeiros.com",
-    "main": "index.js",
-    "scripts": {
-        "start": "$npm_execpath run serve",
-        "serve": "$npm_execpath run gulp dev",
-        "dist": "$npm_execpath run gulp dist",
-        "gulp": "./node_modules/gulp/bin/gulp.js",
-        "test": "echo \"Error: no test specified\" && exit 0"
-    },
-    "author": "Jhonatan Hardt de Medeiros",
-    "license": "MIT",
-    "devDependencies": {
-        "browser-sync": "^2.26.5",
-        "del": "^4.0.0",
-        "gulp": "^4.0.0",
-        "gulp-clean-css": "^4.0.0",
-        "gulp-cssnano": "^2.1.3",
-        "gulp-header": "^2.0.1",
-        "gulp-minify-css": "^1.2.4",
-        "gulp-notify": "^3.2.0",
-        "gulp-rename": "^1.2.2",
-        "gulp-sass": "^4.0.1",
-        "gulp-uglify": "^3.0.0"
-    },
-    "dependencies": {
-        "bootstrap": "^4.3.1",
-        "font-awesome": "^4.7.0",
-        "jquery": "^3.4.1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/JhonatanMedeiros/site-portfolio.git"
-    }
+  "name": "myportfolio",
+  "title": "Jhonatan Medeiros - Site Portfolio",
+  "version": "1.0.6",
+  "description": "",
+  "homepage": "http://www.jhonatanmedeiros.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "$npm_execpath run serve",
+    "serve": "$npm_execpath run gulp dev",
+    "dist": "$npm_execpath run gulp dist",
+    "gulp": "./node_modules/gulp/bin/gulp.js",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "eslint"
+  },
+  "author": "Jhonatan Hardt de Medeiros",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "del": "^4.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-header": "^2.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JhonatanMedeiros/site-portfolio.git"
+  }
 }
