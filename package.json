@@ -15,7 +15,7 @@
     "author": "Jhonatan Hardt de Medeiros",
     "license": "MIT",
     "devDependencies": {
-        "browser-sync": "^2.23.6",
+        "browser-sync": "^2.26.5",
         "del": "^4.0.0",
         "gulp": "^4.0.0",
         "gulp-clean-css": "^4.0.0",
