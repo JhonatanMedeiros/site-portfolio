@@ -1,10 +1,10 @@
 'use strict';
-window.addEventListener('load', () => {
+window.addEventListener('load', function() {
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.getElementsByClassName('form-contact');
+  var forms = document.getElementsByClassName('form-contact');
   // Loop over them and prevent submission
-  const validation = Array.prototype.filter.call(forms, (form) => {
-    form.addEventListener('submit', (event) => {
+  var validation = Array.prototype.filter.call(forms, function(form) {
+    form.addEventListener('submit', function (event) {
 
       if (form.checkValidity() === false) {
         event.preventDefault();
@@ -15,10 +15,10 @@ window.addEventListener('load', () => {
         event.preventDefault();
 
         // get values from FORM
-        const name = $("input#name").val();
-        const email = $("input#email").val();
-        const message = $("textarea#note").val();
-        let firstName = name; // For Success/Failure Message
+        var name = $("input#name").val();
+        var email = $("input#email").val();
+        var message = $("textarea#note").val();
+        var firstName = name; // For Success/Failure Message
         // Check for white space in name for Success/Fail message
         if (firstName.indexOf(' ') >= 0) {
           firstName = name.split(' ').slice(0, -1).join(' ');
@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
             message: message
           },
           cache: false,
-          success: () => {
+          success: function() {
             // Enable button & show success message
             $("#btnSubmit").attr("disabled", false);
             $('#success').html("<div class='alert alert-success'>");
