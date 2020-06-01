@@ -1,5 +1,3 @@
-[![Greenkeeper badge](https://badges.greenkeeper.io/JhonatanMedeiros/site-portfolio.svg)](https://greenkeeper.io/)
-
 # [Jhonatan Medeiros - Site](http://jhonatanmedeiros.com)
 
 Site Pesssoal de [Jhonatan Medeiros](http://jhonatanmedeiros.com)
@@ -26,4 +24,4 @@ Isso gera um pasta chamada **dist**, contendo todo o projeto para distribuição
 
 ## Copyright and License
 
-Copyright 2019 Code released under the [MIT](https://github.com/JhonatanMedeiros/site-portfolio/blob/master/LICENSE) license.
+Copyright 2020 Code released under the [MIT](https://github.com/JhonatanMedeiros/site-portfolio/blob/master/LICENSE) license.
