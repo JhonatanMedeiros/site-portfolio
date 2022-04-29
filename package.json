@@ -1,7 +1,7 @@
 {
   "name": "myportfolio",
   "title": "Jhonatan Medeiros - Site Portfolio",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "",
   "homepage": "https://www.jhonatanmedeiros.com",
   "main": "index.js",
@@ -11,11 +11,13 @@
     "dist": "$npm_execpath run gulp dist",
     "gulp": "./node_modules/gulp/bin/gulp.js",
     "test": "echo \"Error: no test specified\" && exit 0",
-    "lint": "eslint"
+    "lint": "eslint",
+    "changelog": "auto-changelog -p && git add CHANGELOG.md"
   },
   "author": "Jhonatan Hardt de Medeiros",
   "license": "MIT",
   "devDependencies": {
+    "auto-changelog": "^2.4.0",
     "browser-sync": "^2.27.9",
     "del": "^6.0.0",
     "eslint": "^8.14.0",
