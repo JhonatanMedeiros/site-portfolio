@@ -95,14 +95,11 @@ exports.copyVendor = () => {
       "!node_modules/font-awesome/*.json"
     ]))
     .pipe(dest("dist/assets/vendor/font-awesome"))
-    .pipe(src("app/mail/*"))
-    .pipe(dest("dist/mail"))
     .pipe(src("app/assets/img/*"))
     .pipe(dest("dist/assets/img"))
     .pipe(src([
       "app/index.html",
-      "app/manifest.json",
-      "app/sw.js"
+      "app/manifest.json"
     ]))
     .pipe(dest("dist/"));
 };

@@ -1,37 +1,6 @@
 <!doctype html>
 <html lang="pt">
-
 <head>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114755127-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'UA-114755127-1');
-  </script>
-
-  <script>
-
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/sw.js').then(function (registration) {
-          // Registration was successful
-        }).catch(function (err) {
-          // registration failed :(
-        });
-      });
-    }
-
-  </script>
-
-
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,8 +46,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#404040">
 
-
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
 
@@ -91,18 +58,21 @@
 
   <title>Jhonatan Medeiros</title>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114755127-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  <script type="text/javascript">
-    window.smartlook||(function(d) {
-      var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
-      var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
-      c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
-    })(document);
-    smartlook('init', 'ebfb801fe0c67486cf421af5443d0c98f10a30e3');
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114755127-1');
   </script>
 
 </head>
-
 <body>
 
 <div id="wrapper">
@@ -156,10 +126,10 @@
           <img src="assets/img/my-profile.jpg" class="profile-img img-fluid img-thumbnail"
                alt="Jhonatan Medeiros">
           <p class="statement gunmetal profile-desc">
-            <b>Olá,</b> meu nome é <b>Jhonatan Medeiros</b>, tenho 22 anos,
-            <br>estudo Sistemas de Informação pela Faculdade Estácio de Florianópolis.
+            <b>Olá,</b> meu nome é <b>Jhonatan Medeiros</b>, tenho <span id="myage"></span> anos,
+            <br>sou formado Sistemas de Informação pela Faculdade Estácio de Florianópolis.
             <br><br>Atualmente trabalho com <b>Desenvolvimento Web</b>, tanto em frontend e backend.
-            <br>Tenho habilidades com HTML, CSS, JavaScript, TypeScript, Angular, Node.js, Ionic e
+            <br>Tenho habilidades com HTML, CSS/SCSS, JavaScript/TypeScript, Angular, Node.js, Ionic e
             <br>Banco de Dados NoSQL (Mongo DB).
           </p>
           <div class="social-links">
@@ -256,7 +226,7 @@
         </div>
       </div>
 
-      <form role="form" class="form-contact">
+      <form role="form" class="form-contact" action="https://formspree.io/f/meqnprek" method="POST">
 
         <div class="form-group col-lg-12">
           <label class="form-control-label" for="name">Nome</label>
@@ -292,7 +262,7 @@
         <div class="row justify-content-md-center justify-content-sm-center justify-content-lg-center">
           <div class="col">
             <a href="#home" class="logo">Jhonatan Medeiros | Web Developer</a>
-            <p class="made-by-me">Handmade by me © 2020.</p>
+            <p class="made-by-me">Handmade by me © <span id="copyrightYear"></span>.</p>
             <div class="social-links">
 
               <a href="mailto:contato@jhonatanmedeiros.com" aria-hidden="true">
@@ -334,5 +304,4 @@
 <script src="assets/js/main.min.js"></script>
 
 </body>
-
 </html>
